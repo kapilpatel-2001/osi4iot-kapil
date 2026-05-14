@@ -116,8 +116,9 @@ export const dataBaseInitialization = async () => {
 			process.exit(1);
 		}
 
-		if (process_env.REPLICA === "1") {
-			if (result0.rows[0].count !== 0) {
+		if (true) {
+		    logger.log("inside the if statement and the value is of replica is  ", process_env.REPLICA);
+			if (true) {
 				try {
 					const listBucketsResult = await s3Client.send(new ListBucketsCommand({}));
 					const bucketName = process_env.S3_BUCKET_NAME;
